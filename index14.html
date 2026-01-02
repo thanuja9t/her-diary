@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>her — personal diary</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&family=Cinzel&family=Montserrat&family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style14.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>her</h1>
+  <p class="subtitle">a soft space for thoughts, wishes & becoming</p>
+
+  <!-- THEME SECTION -->
+  <section class="box">
+    <h2>🎨 Choose your mood</h2>
+
+    <div class="theme-preview">
+      <div class="preview classic" onclick="setTheme('classic')">🌸 Classic</div>
+      <div class="preview elsa" onclick="setTheme('elsa')">❄️ Elsa</div>
+      <div class="preview barbie" onclick="setTheme('barbie')">🎀 Barbie</div>
+    </div>
+
+    <label class="slider-label">Custom accent color</label>
+    <input type="range" min="0" max="360" id="colorSlider">
+  </section>
+
+  <!-- DIARY -->
+  <section class="box">
+    <h2>📖 Diary</h2>
+    <textarea id="entry" placeholder="Write what your heart is holding today..."></textarea>
+    <button onclick="saveDiary()">Keep this moment</button>
+  </section>
+
+  <!-- WISHLIST / TODO -->
+  <section class="box">
+    <h2>🌸 Today’s Wishes</h2>
+    <input type="text" id="wishInput" placeholder="Something you want to do or have">
+    <button onclick="addWish()">Add</button>
+
+    <div id="wishList" class="grid"></div>
+  </section>
+</div>
+
+<script src="script14.js"></script>
+</body>
+</html>
